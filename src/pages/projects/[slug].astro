@@ -1,0 +1,15 @@
+
+---
+import Base from "../../layouts/Base.astro";
+const { slug } = Astro.params;
+const Page = await import(`../../content/projects/${slug}.md`).catch(() => null);
+---
+<Base title="Project — Onyero Walter Ofuzim">
+  {Page ? (
+    <article class="prose prose-slate dark:prose-invert">
+      <Page.default />
+    </article>
+  ) : (
+    <p>Project not found.</p>
+  )}
+</Base>

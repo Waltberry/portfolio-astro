@@ -1,0 +1,72 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth typography defaults */
+.prose {
+  @apply max-w-none;
+}
+:root {
+  color-scheme: light;
+}
+:root, [data-theme="light"] {
+  --bg: hsl(220 15% 97%);
+  --card: hsl(0 0% 100%);
+  --ink: hsl(220 25% 12%);
+  --subink: hsl(222 12% 40%);
+  --accent: hsl(200 85% 40%);      /* teal/blue calm */
+  --accent-muted: hsl(200 65% 92%);
+}
+[data-theme="dark"] {
+  --bg: hsl(220 16% 10%);
+  --card: hsl(220 14% 14%);
+  --ink: hsl(210 6% 96%);
+  --subink: hsl(216 6% 65%);
+  --accent: hsl(188 79% 52%);
+  --accent-muted: hsl(188 36% 22%);
+  color-scheme: dark;
+}
+
+/* App chrome */
+html, body {
+  height: 100%;
+}
+body {
+  @apply font-sans antialiased;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.container-slim {
+  @apply max-w-5xl mx-auto px-4 sm:px-6;
+}
+
+/* Reusable UI */
+.card {
+  background: var(--card);
+  @apply rounded-2xl shadow-soft border border-black/5;
+}
+.btn {
+  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition-transform;
+  background: var(--accent);
+  color: white;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  @apply inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.badge {
+  @apply text-xs rounded-full px-2 py-1 bg-black/5 dark:bg-white/10;
+}
+nav a.active {
+  color: var(--accent);
+}
+footer a {
+  @apply underline decoration-dotted;
+}

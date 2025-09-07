@@ -1,0 +1,22 @@
+
+---
+import Base from "../layouts/Base.astro";
+import Hero from "../components/Hero.astro";
+---
+<Base>
+  <Hero />
+  <section class="mt-10 grid md:grid-cols-3 gap-6">
+    <a href="/cv" class="card p-6 hover:-translate-y-0.5 transition">
+      <h3 class="font-semibold">Curriculum Vitae</h3>
+      <p class="text-sm text-[color:var(--subink)] mt-2">View role-focused sections pulled from Markdown (summary, skills, experience, education, certifications).</p>
+    </a>
+    <a href="/projects" class="card p-6 hover:-translate-y-0.5 transition">
+      <h3 class="font-semibold">Projects</h3>
+      <p class="text-sm text-[color:var(--subink)] mt-2">Battery models (SPMe/DFN), system identification toolboxes, and cloud/data engineering labs.</p>
+    </a>
+    <a href="/about" class="card p-6 hover:-translate-y-0.5 transition">
+      <h3 class="font-semibold">About</h3>
+      <p class="text-sm text-[color:var(--subink)] mt-2">A short background and links to publications, GitHub, and contact.</p>
+    </a>
+  </section>
+</Base>

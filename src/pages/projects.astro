@@ -1,0 +1,23 @@
+
+---
+import Base from "../layouts/Base.astro";
+
+// We load any markdown put into src/content/projects/*.md
+const projectPages = await Astro.glob('../content/projects/*.md');
+---
+<Base title="Projects — Onyero Walter Ofuzim" description="Selected projects">
+  <section class="grid gap-8">
+    <div class="prose prose-slate dark:prose-invert">
+      <h2>Selected Projects</h2>
+      <p>Drop markdown files in <code>src/content/projects/</code> to populate this page. A simple header and paragraph per project works well.</p>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6">
+      {projectPages.map((P) => (
+        <a class="card p-6 hover:-translate-y-0.5 transition" href={`/projects/${P.file.slice(P.file.lastIndexOf('/')+1, -3)}`}>
+          <h3 class="font-semibold">{P.frontmatter?.title || 'Untitled Project'}</h3>
+          <p class="text-sm text-[color:var(--subink)] mt-2">{P.frontmatter?.summary || 'Click to read more.'}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

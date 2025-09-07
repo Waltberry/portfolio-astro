@@ -1,0 +1,28 @@
+
+---
+import Base from "../layouts/Base.astro";
+import MarkdownBlock from "../components/MarkdownBlock.astro";
+
+// Load user's CV sections by numeric prefix to control order.
+// Place your existing files (e.g., '1_ProfessionalSummary.md', '2_CoreSkills.md', ...)
+// into src/content/cv/ and they'll render automatically.
+const sections = await Astro.glob('../content/cv/*.md');
+// Sort by filename prefix if present
+sections.sort((a, b) => a.file.localeCompare(b.file));
+---
+<Base title="CV — Onyero Walter Ofuzim" description="Curriculum Vitae pulled from Markdown">
+  <section class="grid gap-10">
+    {sections.length === 0 ? (
+      <div class="prose prose-slate dark:prose-invert">
+        <h2>CV</h2>
+        <p>Place your markdown files in <code>src/content/cv/</code> (e.g., <code>1_ProfessionalSummary.md</code>, <code>2_CoreSkills.md</code>, <code>3_Licenses&Certification.md</code>, <code>4_Education&Awards.md</code>, <code>5_Experience.md</code>, <code>6_Projects.md</code>, <code>7_Job_Simulations.md</code>).</p>
+      </div>
+    ) : (
+      sections.map((S) => (
+        <section class="card p-6">
+          <S.default />
+        </section>
+      ))
+    )}
+  </section>
+</Base>
