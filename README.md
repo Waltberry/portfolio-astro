@@ -32,7 +32,7 @@ src/content/cv/
 
 ### Deploy to GitHub Pages
 
-1. Set your `site` in `astro.config.mjs` to `https://YOUR_GITHUB_USERNAME.github.io/REPO_NAME` (or root).
+1. Set your `site` in `astro.config.mjs`
 2. Push to GitHub.
 3. Enable Pages in repo settings.
 4. Use the provided workflow `.github/workflows/deploy.yml` or deploy via Vercel/Netlify.
