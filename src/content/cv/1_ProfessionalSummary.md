@@ -1,2 +1,3 @@
 ## Professional Summary
+
 Multidisciplinary engineer and researcher at the intersection of data, machine learning, and control systems. Skilled in designing AI-assisted and model-driven solutions for energy storage, network optimization, and enterprise data platforms. Experienced in building scalable data pipelines, deploying ML models, and applying system identification and optimization to improve performance and efficiency. Known for rigorous analysis, clear documentation, and the ability to deliver impactful, cost-effective solutions across both research and industry environments.
