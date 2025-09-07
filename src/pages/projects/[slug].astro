@@ -1,15 +1,24 @@
-
 ---
 import Base from "../../layouts/Base.astro";
-const { slug } = Astro.params;
-const Page = await import(`../../content/projects/${slug}.md`).catch(() => null);
+
+// Tell Astro which slugs to prerender
+export async function getStaticPaths() {
+  const entries = await Astro.glob('../../content/projects/*.md');
+  return entries.map((M) => {
+    const file = M.file.substring(M.file.lastIndexOf('/') + 1);
+    const slug = file.replace(/\.md$/, '');
+    return {
+      params: { slug },
+      props: { Page: M.default, fm: M.frontmatter },
+    };
+  });
+}
+
+const { Page, fm } = Astro.props;
 ---
-<Base title="Project — Onyero Walter Ofuzim">
-  {Page ? (
-    <article class="prose prose-slate dark:prose-invert">
-      <Page.default />
-    </article>
-  ) : (
-    <p>Project not found.</p>
-  )}
+
+<Base title={`${fm?.title ?? 'Project'} — Onyero Walter Ofuzim`} description={fm?.summary ?? ''}>
+  <article class="prose prose-slate dark:prose-invert">
+    <Page />
+  </article>
 </Base>

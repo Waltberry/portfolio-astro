@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="en" data-theme="light"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>E-Commerce Recommender System — Onyero Walter Ofuzim</title><meta name="description" content="Production-ready, modular recommender with popularity, item-to-item, and cart-aware hybrid strategies over RetailRocket data; batch + streaming simulation; Streamlit UI."><link rel="icon" href="/favicon.svg"><link rel="stylesheet" href="/reset.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/globals.css"><link rel="stylesheet" href="/theme.css"><link rel="stylesheet" href="/app.css"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/tailwind.css"><link rel="stylesheet" href="/index.css"><link rel="stylesheet" href="/src/styles/global.css"><meta name="color-scheme" content="light dark"><link rel="stylesheet" href="/_astro/about.lYAH35lF.css"></head> <body class="min-h-screen"> <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-black/30 border-b border-black/5"> <div class="container-slim flex items-center justify-between py-4"> <a href="/" class="font-bold tracking-tight text-lg">OWO<span class="text-[color:var(--accent)]">.</span></a> <nav class="flex items-center gap-6 text-sm text-[color:var(--subink)]"> <a href="/" class="">Home</a> <a href="/projects" class="active">Projects</a> <a href="/cv" class="">CV</a> <a href="/about" class="">About</a> <a href="/contact" class="">Contact</a> <button id="themeToggle" class="badge" aria-label="Toggle dark mode">☾</button> </nav> </div> </header> <main class="container-slim py-10 sm:py-14">  <article class="prose prose-slate dark:prose-invert"> <h1 id="e-commerce-recommender-system">E-Commerce Recommender System</h1>
+<p><strong>Duration:</strong> June 2025</p>
+<p>A modular, production-oriented product recommender built in Python with Streamlit.</p>
+<p><strong>What it does</strong></p>
+<ul>
+<li>Suggests relevant items using real-time and historical user behaviour (views, purchases, cart).</li>
+<li>Implements baseline popularity, item-to-item cosine similarity, and a cart-aware hybrid method.</li>
+<li>Simulates batch &#x26; streaming pipelines to mirror a scalable e‑commerce stack.</li>
+</ul>
+<p><strong>Highlights</strong></p>
+<ul>
+<li><strong>Data</strong>: RetailRocket dataset (sessions, interactions, item meta)</li>
+<li><strong>Models</strong>: popularity, co-visitation matrix, cosine item embedding similarity, hybrid scoring</li>
+<li><strong>Pipelines</strong>: offline feature generation (batch) + a lightweight streaming simulation</li>
+<li><strong>App</strong>: Streamlit interface for interactive demo, scenario toggles, and live recommendations</li>
+</ul>
+<p><strong>Architecture (conceptual)</strong>
+Offline ETL → Feature Store (parquet/Delta) → Batch similarity matrices<br>
+Streaming consumer → Session cache → Hybrid scorer → Streamlit UI</p>
+<p><strong>Stack</strong>
+Python, pandas, NumPy, scikit-learn, Streamlit, PySpark (optional), Parquet/Delta.</p>
+<p><strong>Next</strong>
+Add bandit policy for exploration/exploitation and implicit MF (ALS) for cold-start.</p>
+<p><strong>GitHub</strong>: <a href="https://github.com/Waltberry/recommender-system">https://github.com/Waltberry/recommender-system</a></p> </article>  </main> <footer class="border-t border-black/5"> <div class="container-slim py-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 justify-between text-sm text-[color:var(--subink)]"> <div>© 2025 Onyero Walter Ofuzim</div> <div class="flex gap-4"> <a href="https://github.com/Waltberry" target="_blank" rel="noreferrer">GitHub</a> <a href="https://www.linkedin.com/in/onyero-walter-ofuzim" target="_blank" rel="noreferrer">LinkedIn</a> <a href="mailto:onyero.ofuzim@ucalgary.ca">Email</a> </div> </div> </footer> <script>
+      // Minimal dark mode toggle with localStorage
+      const root = document.documentElement;
+      const saved = localStorage.getItem('theme');
+      if (saved) root.setAttribute('data-theme', saved);
+      document.getElementById('themeToggle')?.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', current);
+        localStorage.setItem('theme', current);
+      });
+    </script> </body> </html>
