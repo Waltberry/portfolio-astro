@@ -1,6 +1,6 @@
 ---
 title: Streamlining Employee Data
-summary: Dataframes exercise: joins/aggregations to merge employee data from multiple sources.
+summary: Dataframes exercise:- joins/aggregations to merge employee data from multiple sources.
 duration: Aug 2022
 ---
 

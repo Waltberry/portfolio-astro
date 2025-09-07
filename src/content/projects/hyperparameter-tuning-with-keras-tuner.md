@@ -1,6 +1,6 @@
 ---
 title: Hyperparameter Tuning with Keras Tuner
-summary: Guided project: use Keras Tuner to search model hyperparameters and compare trials.
+summary: Guided project:- use Keras Tuner to search model hyperparameters and compare trials.
 duration: Jan 2022
 ---
 

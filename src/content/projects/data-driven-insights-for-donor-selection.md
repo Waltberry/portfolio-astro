@@ -1,6 +1,6 @@
 ---
 title: Data-Driven Insights for Donor Selection
-summary: ML insights for a national charity: donor propensity modeling and campaign targeting with uplift-style thinking.
+summary: ML insights for a national charity:- donor propensity modeling and campaign targeting with uplift-style thinking.
 duration: Sep 2023
 ---
 

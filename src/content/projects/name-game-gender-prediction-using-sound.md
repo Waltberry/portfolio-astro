@@ -1,5 +1,5 @@
 ---
-title: Name Game: Gender Prediction using Sound
+title: Name Game:- Gender Prediction using Sound
 summary: Playful analysis of names and phonetics; model to predict gender distribution.
 duration: Aug 2022
 ---

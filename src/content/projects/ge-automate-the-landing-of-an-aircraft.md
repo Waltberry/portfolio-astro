@@ -1,6 +1,6 @@
 ---
-title: GE: Automate the Landing of an Aircraft
-summary: Aviation simulation project: control/system design for automated landing sequences.
+title: GE:- Automate the Landing of an Aircraft
+summary: Aviation simulation project:- control/system design for automated landing sequences.
 duration: Jun 2022 – Aug 2022
 ---
 

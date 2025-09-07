@@ -1,6 +1,6 @@
 ---
 title: Bank Account Simulator
-summary: Intro OOP exercise: deposit/withdraw with simple validation and status display.
+summary: Intro OOP exercise:- deposit/withdraw with simple validation and status display.
 duration: Nov 2021
 ---
 

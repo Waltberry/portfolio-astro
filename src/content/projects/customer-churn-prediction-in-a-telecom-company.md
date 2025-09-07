@@ -1,6 +1,6 @@
 ---
 title: Customer Churn Prediction in a Telecom Company
-summary: End-to-end churn modeling: EDA, feature engineering, model selection, and business metrics for a telecom case study.
+summary: End-to-end churn modeling:- EDA, feature engineering, model selection, and business metrics for a telecom case study.
 duration: Sep 2023
 ---
 

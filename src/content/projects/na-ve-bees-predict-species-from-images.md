@@ -1,5 +1,5 @@
 ---
-title: Naïve Bees: Predict Species from Images
+title: Naïve Bees:- Predict Species from Images
 summary: CNN species classifier for honey bees vs bumble bees; tidy training loop.
 duration: Aug 2022
 ---

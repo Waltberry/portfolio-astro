@@ -1,5 +1,5 @@
 ---
-title: Naïve Bees: Image Loading and Processing
+title: Naïve Bees:- Image Loading and Processing
 summary: Data pipeline for bee images; basic augmentation and sanity checks.
 duration: Aug 2022
 ---
